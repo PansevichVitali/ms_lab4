@@ -75,10 +75,6 @@ int read_result(char *buffer, char **buffer_location,
 	long a2 = 0;
 	long res = 0;
 
-	if (arg1_input[strlen(arg1_input) - 2] == '\n') {
-		arg1_input[strlen(arg1_input) - 2] = (char)0;
-	}
-
 	kstrtol(arg1_input, 10, &a1);
 	kstrtol(arg2_input, 10, &a2);
 
