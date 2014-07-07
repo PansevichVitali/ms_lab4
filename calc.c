@@ -32,7 +32,6 @@ int write_arg1(struct file *file, const char *buf, unsigned long count, void *da
 		count = WRITE_SIZE;
 	}
 
-	//memset(arg1_input, 0, WRITE_SIZE);
 	memcpy(arg1_input, buf, count);
 	return count;
 }
@@ -144,4 +143,3 @@ void cleanup_module()
 	remove_proc_entry(RESULT, NULL);
 	printk(KERN_INFO "/proc/%s removed\n", PARENT_DIR);
 }
-
