@@ -45,7 +45,6 @@ int write_arg2(struct file *file, const char *buf, unsigned long count, void *da
 		count = WRITE_SIZE;
 	}
 
-	//memset(arg2_input, 0, WRITE_SIZE);
 	memcpy(arg2_input, buf, count);
 	return count;
 }
@@ -59,7 +58,6 @@ int write_operation(struct file *file, const char *buf, unsigned long count, voi
     	count = WRITE_SIZE;
 	}
 
-	//memset(operation, 0, WRITE_SIZE);
 	memcpy(operation_input, buf, count);
 	return count;
 }
